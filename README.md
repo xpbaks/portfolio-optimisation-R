@@ -26,6 +26,14 @@ If TSLA is at Risk = 0.035, Return = 0.003, it means:
 Average daily return is higher (0.3% per day),
 But volatility is much larger (3.5% swings daily).
 
+Interpretation Example:
+A dot at Risk = 0.02, Return = 0.0015 means:
+The portfolio has average daily return of 0.15%,
+With volatility of 2%.
+Some dots are below others → worse portfolios (higher risk, lower return).
+The top edge (efficient frontier) shows the best portfolios: maximum return for a given risk.
+This plot demonstrates Modern Portfolio Theory (Markowitz): diversification shifts portfolios toward the efficient frontier.
+
 ## 🔧 Tools Used
 - R, quantmod, tidyverse, ggplot2
 
