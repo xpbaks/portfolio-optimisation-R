@@ -26,7 +26,7 @@ If TSLA is at Risk = 0.035, Return = 0.003, it means:
 Average daily return is higher (0.3% per day),
 But volatility is much larger (3.5% swings daily).
 
-Interpretation Example:
+Interpretation:
 A dot at Risk = 0.02, Return = 0.0015 means:
 The portfolio has average daily return of 0.15%,
 With volatility of 2%.
