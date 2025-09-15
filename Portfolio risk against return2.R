@@ -13,13 +13,13 @@ library(tidyverse)  # for data wrangling & plotting
 # -----------------------------------------------------------
 
 # Choose assets: mix of stocks, ETF, and crypto
-symbols <- c("AAPL", "MSFT", "SPY", "BTC-USD")
+symbols <- c("GOOG", "AMZN", "VOO", "TSLA")
 
 # Download daily prices from Yahoo Finance (2020–2025)
 getSymbols(symbols, from = "2020-01-01", to = "2025-01-01", src = "yahoo")
 
 # Extract only the Closing Prices
-prices <- merge(Cl(AAPL), Cl(MSFT), Cl(SPY), Cl(`BTC-USD`))
+prices <- merge(Cl(GOOG), Cl(AMZN), Cl(VOO), Cl(TSLA))
 colnames(prices) <- symbols   # rename for readability
 
 # -----------------------------------------------------------
@@ -133,6 +133,7 @@ print(head(frontier_portfolios, 10))
 # Example interpretation:
 # Each row shows risk, return, and % allocation to GOOG, AMZN, VOO, TSLA
 # e.g., 0.4 GOOG, 0.2 AMZN, 0.3 VOO, 0.1 TSLA = 40%, 20%, 30%, 10%
+
 
 
 
