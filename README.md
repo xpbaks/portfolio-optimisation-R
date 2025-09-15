@@ -17,6 +17,7 @@ to approximate the **Efficient Frontier**. It combines concepts from
 - Simulated portfolios cloud
 - Efficient frontier (approximation)
 - Portfolio weights along the efficient frontier
+
 Interpretion:
 If GOOG is at Risk = 0.02, Return = 0.001, it means:
 On average, Google’s stock grows 0.1% per day,
