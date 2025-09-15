@@ -18,10 +18,6 @@ to approximate the **Efficient Frontier**. It combines concepts from
 - Efficient frontier (approximation)
 - Portfolio weights along the efficient frontier
 
-Example plot:
-
-![Efficient Frontier](efficient_frontier.png)
-
 ## 🔧 Tools Used
 - R, quantmod, tidyverse, ggplot2
 
