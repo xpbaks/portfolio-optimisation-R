@@ -1,44 +1,88 @@
-# Portfolio Optimisation in R
+# Efficient Frontier Portfolio Analysis in R
 
-This project simulates random portfolios using real financial data (stocks, ETF, and crypto) 
-to approximate the **Efficient Frontier**. It combines concepts from 
-**Economics, Finance, and Data Science**.
+## 📌 Project Overview
+This project explores **portfolio optimisation** using the concept of the **Efficient Frontier** in Modern Portfolio Theory (MPT).  
+The goal is to approximate the risk-return trade-off of portfolios formed from a small set of financial assets and identify optimal portfolio allocations.
 
-## 📊 Methods
-- Data from Yahoo Finance (GOOG, AMZN, VOO, TSLA, 2020–2025)
-- Calculated daily returns using `quantmod`
-- Monte Carlo simulation of 5,000 random portfolios
-- Computed expected returns, risks (standard deviation), and weights
-- Extracted efficient frontier portfolios with `dplyr`
-- Visualised results with `ggplot2`
+This project was completed as part of my learning journey in **Data Science and Economics**, using R for financial data analysis and visualisation.
 
-## 📈 Results
-- Scatterplot of risk vs return for individual assets
-- Simulated portfolios cloud
-- Efficient frontier (approximation)
-- Portfolio weights along the efficient frontier
+---
 
-Interpretion:
-If GOOG is at Risk = 0.02, Return = 0.001, it means:
-On average, Google’s stock grows 0.1% per day,
-But daily prices fluctuate about 2% up or down.
-If TSLA is at Risk = 0.035, Return = 0.003, it means:
-Average daily return is higher (0.3% per day),
-But volatility is much larger (3.5% swings daily).
+## 🎯 Objectives
+- Collect and analyse real financial market data.
+- Simulate random portfolios by varying asset weights.
+- Compute **expected returns**, **portfolio risk (volatility)**, and **Sharpe ratios**.
+- Approximate the **Efficient Frontier** and highlight optimal portfolios.
+- Extract details of portfolio allocations (percentages of each stock).
 
-Interpretation:
-A dot at Risk = 0.02, Return = 0.0015 means:
-The portfolio has average daily return of 0.15%,
-With volatility of 2%.
-Some dots are below others → worse portfolios (higher risk, lower return).
-The top edge (efficient frontier) shows the best portfolios: maximum return for a given risk.
-This plot demonstrates Modern Portfolio Theory (Markowitz): diversification shifts portfolios toward the efficient frontier.
+---
 
-## 🔧 Tools Used
-- R, quantmod, tidyverse, ggplot2
+## 🛠️ Tools & Skills
+- **R Programming**
+  - Packages: `tidyquant`, `dplyr`, `ggplot2`, `purrr`
+- **Data Science Concepts**
+  - Data wrangling, visualisation, and simulation
+- **Financial Economics**
+  - Risk-return trade-off, diversification, efficient frontier, Sharpe ratio
 
-## 🎯 Skills Showcased
-- Financial data analysis
-- Portfolio theory (risk-return tradeoff)
-- Data visualisation
-- Monte Carlo simulation
+---
+
+## 📂 Data
+The project uses historical stock price data (e.g., `AAPL`, `MSFT`, `GOOG`, `AMZN`) sourced via `tidyquant`.  
+You can easily replace these tickers with other assets (e.g., ETFs, commodities, cryptocurrencies).
+
+---
+
+## 📈 Methodology
+
+1. **Import stock price data**  
+   Daily adjusted closing prices were retrieved and converted to log returns.
+
+2. **Simulate random portfolios**  
+   Thousands of random weight combinations were generated to represent possible portfolio allocations.
+
+3. **Calculate portfolio metrics**  
+   - **Expected Return**: Weighted average of asset returns  
+   - **Risk (Volatility)**: Portfolio standard deviation  
+   - **Sharpe Ratio**: Return-to-risk efficiency
+
+4. **Plot the Efficient Frontier Approximation**  
+   Scatterplot of portfolio risk vs. return, highlighting the "frontier" of optimal trade-offs.
+
+5. **Extract optimal portfolios**  
+   Retrieve the asset weights (percent allocations) for portfolios lying on the efficient frontier.
+
+---
+
+## 📊 Results
+
+### Portfolio Simulation Scatterplot
+*(Insert your plot here)*
+
+- **X-axis (Risk)**: Portfolio standard deviation (volatility)  
+- **Y-axis (Return)**: Expected portfolio return  
+- **Colour**: Sharpe ratio (higher is better)
+
+### Efficient Frontier Approximation
+*(Insert your plot here)*
+
+- The smooth "frontier" line represents optimal portfolios that maximise return for a given risk.  
+- Portfolios below the line are inefficient.
+
+### Example Portfolio Allocations
+*(Insert your portfolio weight table here)*
+
+| Portfolio | AAPL | MSFT | GOOG | AMZN | Expected Return | Risk | Sharpe Ratio |
+|-----------|------|------|------|------|----------------|------|--------------|
+| 1         | 40%  | 30%  | 20%  | 10%  | 0.12           | 0.18 | 0.67         |
+| 2         | 25%  | 25%  | 25%  | 25%  | 0.10           | 0.15 | 0.65         |
+
+---
+
+## 📘 Key Learnings
+- Learned how to use R for **financial market data analysis**.  
+- Applied **Modern Portfolio Theory** concepts to real data.  
+- Gained experience with **simulation, data wrangling, and visualisation**.  
+- Built a reproducible project showcasing both **data science** and **economics** knowledge.
+
+---
